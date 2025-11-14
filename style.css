@@ -1,0 +1,186 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root{
+    --bg:#0F1217;
+    --bg-light:#161B22;
+    --text:#E2E8F0;
+    --text-muted:#94A3B8;
+    --accent:#3B82F6;
+    --card-bg:#1A1F27;
+    --radius:16px;
+    --shadow: 0 6px 20px rgba(0,0,0,0.45);
+}
+
+/* Body / Main */
+html, body, [data-testid="stAppViewContainer"] {
+    font-family: 'Poppins', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    background: var(--bg) !important;
+    color: var(--text) !important;
+}
+
+/* Main Streamlit container */
+.block-container{
+    max-width: 1000px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-top: 3rem !important;
+    padding-bottom: 4rem !important;
+}
+
+/* Headings */
+h1, .stTitle {
+    color: var(--accent) !important;
+    font-weight: 700 !important;
+}
+
+h2, .stSubheader {
+    color: var(--accent) !important;
+    font-weight: 600 !important;
+}
+
+/* Card base */
+.card {
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 20px;
+    margin-bottom: 1.2rem;
+    border: 1px solid rgba(255,255,255,0.06);
+}
+
+/* Intro card */
+.intro-card h3 {
+    margin-top: 0;
+    margin-bottom: 0.6rem;
+    color: var(--text);
+}
+
+.intro-card p {
+    margin: 0.35rem 0;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+/* Contact list */
+.contact-card .contact-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.contact-card .contact-list li {
+    margin: 0.45rem 0;
+}
+
+.contact-card a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.contact-card a:hover {
+    text-decoration: underline;
+}
+
+/* Skills */
+.skill-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.skill-list li {
+    margin: 0.35rem 0;
+    font-size: 0.95rem;
+    color: var(--text-muted);
+}
+
+/* Project cards (anchor card) */
+a.card.project-card {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    border-radius: var(--radius);
+    padding: 18px;
+    margin-bottom: 1.2rem;
+    background: var(--bg-light);
+    border: 1px solid rgba(255,255,255,0.06);
+}
+
+/* Inner content */
+.project-card-content h4 {
+    margin: 0 0 6px 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text);
+}
+
+.project-card-content .muted {
+    color: var(--text-muted);
+    margin: 0.4rem 0 0.75rem 0;
+    font-size: 0.93rem;
+}
+
+/* Tags */
+.tag-row {
+    margin-top: 10px;
+}
+
+.tag {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-right: 6px;
+    margin-bottom: 6px;
+    font-size: 0.8rem;
+    border-radius: 999px;
+    background: rgba(59,130,246,0.16);
+    color: var(--accent);
+    border: 1px solid rgba(59,130,246,0.22);
+}
+
+/* Hover Effects */
+a.card.project-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 26px rgba(0,0,0,0.55);
+}
+
+/* Muted text */
+.muted {
+    color: var(--text-muted);
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    color: var(--text-muted);
+    margin-top: 2.5rem;
+    font-size: 0.95rem;
+}
+
+/* Scrollbar (Premium Look) */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #111418;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #2b3540;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #3b4754;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .block-container{
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+}
